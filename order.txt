@@ -1,0 +1,5 @@
+mount1-dog4-mount2-hut4-mount4
+mount3-cat4-shore3-tree1-hut3
+shore1-shore4-hut2-tree3-shore2
+hut1-dog3-tree2-cat2-dog1
+dog2-cat3-tree4-cat1   
