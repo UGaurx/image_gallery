@@ -1,0 +1,70 @@
+body {
+  margin: 1em;
+  padding: 0.6em 0.7em;
+  background-color: peachpuff;
+  font-family: poppins, sans-serif;
+}
+body p {
+  font-weight: bold;
+  font-size: xx-large;
+}
+body .sub {
+  font-size: large;
+}
+body .pdf {
+  align-self: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1em;
+}
+.header svg {
+  width: 2.3em;
+  margin-top: -0.5em;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  font-size: 1rem;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  width: 45%;
+  max-width: 45%;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5em;
+}
+nav ul a {
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  padding: 0.7em 1.5em;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+nav ul a:hover {
+  background: rgb(235, 235, 235);
+}
+nav .close {
+  float: right;
+  margin: 2.2em;
+  width: 2em;
+}
+
+.open-nav {
+  transform: translateX(0);
+}/*# sourceMappingURL=ug.css.map */

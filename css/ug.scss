@@ -1,0 +1,70 @@
+body {
+    margin: 1em;
+    padding: .6em .7em;
+    background-color: peachpuff;
+    font-family: poppins,  sans-serif;
+    p {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+    .sub{
+        font-size: large;
+    }
+    .pdf {
+        align-self: center;
+        position:relative;
+        width: 100%;
+        height: 100vh;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1em;
+    svg {
+        width: 2.3em;
+        margin-top: -.5em;
+        cursor: pointer;
+    }
+}
+nav {
+    position: fixed;
+    font-size: 1rem;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 45%;
+    max-width: 45%;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 5em;
+
+        a {
+            color: black;
+            font-size: large;
+            font-weight: bold;
+            padding: .7em 1.5em;
+            display: block;
+            text-decoration: none;
+            transition: background .3s ease-in-out;
+
+            &:hover {
+                background: rgb(235, 235, 235);
+            }
+        }
+    }
+    .close {
+        float: right;
+        margin: 2.2em;
+        width: 2em;
+    }
+}
+.open-nav {
+    transform: translateX(0);
+}
