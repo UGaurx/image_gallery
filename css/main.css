@@ -13,28 +13,26 @@ a {
   font-size: 1.3 rem;
 }
 
-.logo {
+.wrapper .header {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .header .logo {
   color: rgb(12, 11, 11);
   font-weight: bold;
   font-size: x-large;
   text-transform: uppercase;
   text-decoration: underline;
 }
-.logo span {
+.wrapper .header .logo span {
   color: white;
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-.header svg {
+.wrapper .header svg {
   width: 2.3em;
   margin-top: -0.5em;
   cursor: pointer;
 }
-
-nav {
+.wrapper nav {
   position: fixed;
   font-size: 1rem;
   right: 0;
@@ -47,32 +45,30 @@ nav {
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
 }
-nav ul {
+.wrapper nav ul {
   list-style-type: none;
   padding: 0;
   margin-top: 5em;
 }
-nav ul a {
+.wrapper nav ul a {
   color: black;
   padding: 0.7em 1.5em;
   display: block;
 }
-nav ul a:hover {
+.wrapper nav ul a:hover {
   background: rgb(235, 235, 235);
 }
-nav .close {
+.wrapper nav .close {
   float: right;
   margin: 1.5em;
   width: 2em;
 }
-
-.searchbar {
+.wrapper .searchbar {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   position: relative;
 }
-
-#searchInput {
+.wrapper .searchbar #searchInput {
   width: 96%;
   padding: 10px;
   border: 2px solid #3498db;
@@ -80,22 +76,24 @@ nav .close {
   font-size: 16px;
   outline: none;
 }
-
-#searchInput:focus {
+.wrapper .searchbar #searchInput:focus {
   border-color: #2980b9;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-
-.image-container {
+.wrapper .image-container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
 }
-
-img {
+.wrapper .image-container img {
   margin: 5px;
   max-width: 100%;
   height: auto;
+}
+.wrapper .image-container img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
 }
 
 nav.open-nav {
