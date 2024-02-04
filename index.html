@@ -13,7 +13,7 @@
 <body>
     <div class="wrapper">
         <div class="header">
-            <a href="#"  class="logo">| <span>Image </span>Gallery |</a>
+            <a href="index.html"  class="logo">| <span>Image</span> Gallery |</a>
             
             <nav>
                 <svg class="close" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +26,8 @@
                     <li><a href="../html/about.html" >About</a></li>
                     <li><a href="../html/ug.html" >@UG</a></li>
                </ul>
-               
             </nav>
+
             <svg class="hamicon" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.2083 5.83334H23.3333C25.2672 5.83334 27.1219 6.60157 28.4893 7.96902C29.8568 9.33648 30.625 11.1911 30.625 13.125H2.91666C2.91666 11.1911 3.68488 9.33648 5.05234 7.96902C6.41979 6.60157 8.27445 5.83334 10.2083 5.83334ZM23.3333 7.29168H10.2083C7.49582 7.29168 5.20624 9.14376 4.56457 11.6667H28.9771C28.3354 9.14376 26.0458 7.29168 23.3333 7.29168ZM30.625 23.3333C30.625 25.2672 29.8568 27.1219 28.4893 28.4893C27.1219 29.8568 25.2672 30.625 23.3333 30.625H10.2083C8.27445 30.625 6.41979 29.8568 5.05234 28.4893C3.68488 27.1219 2.91666 25.2672 2.91666 23.3333H30.625ZM10.2083 29.1667H23.3333C26.0458 29.1667 28.3354 27.3146 28.9771 24.7917H4.56457C5.20624 27.3146 7.49582 29.1667 10.2083 29.1667ZM18.2292 14.5833L21.1458 17.5L24.0625 14.5833H27.7083C28.4819 14.5833 29.2237 14.8906 29.7707 15.4376C30.3177 15.9846 30.625 16.7265 30.625 17.5V18.9583C30.625 19.7319 30.3177 20.4738 29.7707 21.0207C29.2237 21.5677 28.4819 21.875 27.7083 21.875H5.83332C5.05978 21.875 4.31791 21.5677 3.77093 21.0207C3.22395 20.4738 2.91666 19.7319 2.91666 18.9583V17.5C2.91666 16.7265 3.22395 15.9846 3.77093 15.4376C4.31791 14.8906 5.05978 14.5833 5.83332 14.5833H18.2292ZM21.1458 19.5563L17.6312 16.0417H5.83332C5.44655 16.0417 5.07562 16.1953 4.80213 16.4688C4.52864 16.7423 4.37499 17.1132 4.37499 17.5V18.9583C4.37499 19.3451 4.52864 19.716 4.80213 19.9895C5.07562 20.263 5.44655 20.4167 5.83332 20.4167H27.7083C28.0951 20.4167 28.466 20.263 28.7395 19.9895C29.013 19.716 29.1667 19.3451 29.1667 18.9583V17.5C29.1667 17.1132 29.013 16.7423 28.7395 16.4688C28.466 16.1953 28.0951 16.0417 27.7083 16.0417H24.6604L21.1458 19.5563Z" fill="black"/>
             </svg>
@@ -37,37 +37,104 @@
             <input type="text" id="searchInput" placeholder="Search..." oninput="searchImages()">
         </section>
 
-        <section class="image-container">
-
-            <img src="images/mount1.jpg" alt="Mountain 1">
-            <img src="images/dog4.jpg" alt="Dog 4">
-            <img src="images/mount2.jpg" alt="Mountain 2">
-            <img src="images/hut4.jpg" alt="Hut 4">
-            <img src="images/cat4.jpg" alt="cat 4">
-
-            <img src="images/mount4.jpg" alt="Mountain 4">
-            <img src="images/mount3.jpg" alt="Mountain 3">  
-            <img src="images/tree1.jpg" alt="Tree 1">
-            <img src="images/hut3.jpg" alt="Hut 3">
-
-            <img src="images/shore1.jpg" alt="Shore 1">
-            <img src="images/shore3.jpg" alt="Shore 3">
-            <img src="images/shore4.jpg" alt="Shore 4">
-            <img src="images/hut2.jpg" alt="Hut 2">
-            <img src="images/tree3.jpg" alt="Tree 3">
-            <img src="images/shore2.jpg" alt="Shore 2">
-
-            <img src="images/hut1.jpg" alt="Hut 1">
-            <img src="images/dog3.jpg" alt="Dog 3">
-            <img src="images/tree2.jpg" alt="Tree 2">
-            <img src="images/cat2.jpg" alt="cat 2">
-            <img src="images/dog1.jpg" alt="Dog 1">
-
-            <img src="images/dog2.jpg" alt="Dog 2">
-            <img src="images/cat3.jpg" alt="cat 3">
-            <img src="images/tree4.jpg" alt="Tree 4">
-            <img src="images/cat1.jpg" alt="cat 1">
-        </section>
+        <div class="image-container">
+            <div class="grid">
+                <div class="image-holder">
+                    <img class="img" src="images/mount1.jpg" alt="Mountain 1">
+                    <div class="text">Mountain 1</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/dog4.jpg" alt="Dog 4">
+                    <div class="text">DOG 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/mount2.jpg" alt="Mountain 2">
+                    <div class="text">Mountain 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/hut4.jpg" alt="Hut 4">
+                    <div class="text">Hut 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/cat4.jpg" alt="cat 4">
+                    <div class="text">Cat 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/mount4.jpg" alt="Mountain 4">
+                    <div class="text">Mountain 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/mount3.jpg" alt="Mountain 3">
+                    <div class="text">Mountain 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/tree1.jpg" alt="Tree 1">
+                    <div class="text">Tree 1</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/hut3.jpg" alt="Hut 3">
+                    <div class="text">Hut 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/shore1.jpg" alt="Shore 1">
+                    <div class="text">Shore 1</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/shore3.jpg" alt="Shore 3">
+                    <div class="text">Shore 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/shore4.jpg" alt="Shore 4">
+                    <div class="text">Shore 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/hut2.jpg" alt="Hut 2">
+                    <div class="text">Hut 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/tree3.jpg" alt="Tree 3">
+                    <div class="text">Tree 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/shore2.jpg" alt="Shore 2">
+                    <div class="text">Shore 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/hut1.jpg" alt="Hut 1">
+                    <div class="text">Hut 1</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/dog3.jpg" alt="Dog 3">
+                    <div class="text">Dog 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/tree2.jpg" alt="Tree 2">
+                    <div class="text">Tree 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/cat2.jpg" alt="cat 2">
+                    <div class="text">Cat 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/dog1.jpg" alt="Dog 1">
+                    <div class="text">Dog 1</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/dog2.jpg" alt="Dog 2">
+                    <div class="text">Dog 2</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/cat3.jpg" alt="cat 3">
+                    <div class="text">Cat 3</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/tree4.jpg" alt="Tree 4">
+                    <div class="text">Tree 4</div>
+                </div>
+                <div class="image-holder">
+                    <img class="img" src="images/cat1.jpg" alt="cat 1">
+                    <div class="text">Cat 1</div>
+                </div>
     </div>
     <script src="scripts/script.js"></script>
 </body>

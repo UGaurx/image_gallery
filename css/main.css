@@ -1,6 +1,6 @@
 body {
   margin: 1.5em;
-  font-family: poppins, sans serif;
+  font-family: "poppins", sans serif;
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-position: center;
@@ -18,7 +18,7 @@ a {
   justify-content: space-between;
 }
 .wrapper .header .logo {
-  color: rgb(12, 11, 11);
+  color: black;
   font-weight: bold;
   font-size: x-large;
   text-transform: uppercase;
@@ -80,20 +80,55 @@ a {
   border-color: #2980b9;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-.wrapper .image-container {
+.wrapper .grid {
   position: relative;
   display: flex;
   flex-wrap: wrap;
 }
-.wrapper .image-container img {
-  margin: 5px;
+.wrapper .grid .image-holder {
+  transform: translateZ(0);
+  position: relative;
+  overflow: hidden;
   max-width: 180px;
-  max-height: 150px;
+  max-width: 150px;
 }
-.wrapper .image-container img:hover {
+.wrapper .grid .image-holder .img {
+  margin: 0.7em;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.wrapper .grid .image-holder .text {
+  position: absolute;
+  inset: 0;
+  font-size: 1.27rem;
+  padding: 1rem;
+  -webkit-text-stroke-width: 0.02rem;
+  -webkit-text-stroke-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.wrapper .grid .image-holder:hover {
   cursor: pointer;
   transform: scale(1.07);
-  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.94);
+}
+.wrapper .grid .image-holder:hover .img {
+  filter: blur(6px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 95px rgba(0, 229, 255, 0.94);
+  transition: 50ms ease-in-out;
+}
+.wrapper .grid .image-holder:hover .text {
+  z-index: 1;
+  font-weight: bold;
+  transition: 100ms ease-in-out;
 }
 
 nav.open-nav {
@@ -104,7 +139,7 @@ nav.open-nav {
   .hamicon {
     display: none;
   }
-  nav {
+  .wrapper nav {
     transform: translateX(0);
     position: unset;
     display: block;
@@ -112,18 +147,18 @@ nav.open-nav {
     height: auto;
     background: none;
   }
-  nav .close {
+  .wrapper nav .close {
     display: none;
   }
-  nav ul {
+  .wrapper nav ul {
     display: flex;
     margin: -0.6em;
   }
-  nav ul a {
+  .wrapper nav ul a {
     font-weight: bold;
     padding: 0.5em 1.5em;
   }
-  nav ul a:hover {
+  .wrapper nav ul a:hover {
     background: none;
     text-decoration: underline;
   }

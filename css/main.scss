@@ -1,6 +1,6 @@
 body {
     margin: 1.5em;
-    font-family: poppins, sans serif;
+    font-family: "poppins", sans serif;
     background-image: url('../images/background.jpg'); 
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@ a {
         justify-content: space-between;
 
         .logo {
-            color: rgb(12, 11, 11);
+            color: black;
             font-weight: bold;
             font-size: x-large;
             text-transform: uppercase;
@@ -90,19 +90,56 @@ a {
         
     }
 
-    .image-container {
+    .grid {
         position: relative;
         display: flex;
         flex-wrap: wrap;
-    
-        img {
-            margin: 5px;
-            max-width: 180px; 
-            max-height: 150px;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(190px,150px));
+        .image-holder {
+            transform: translateZ(0);
+            position: relative;
+            overflow: hidden;
+            max-width: 180px;
+            max-width: 150px;
+            .img {
+                margin: 0.7em;
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: center;
+                
+            }
+              
+            .text {
+                position: absolute;
+                inset: 0;
+                font-size: 1.27rem;
+                padding: 1rem;
+                -webkit-text-stroke-width: 0.02rem;
+                -webkit-text-stroke-color: gold; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: -1;
+            }
+
             &:hover {
                 cursor: pointer;
                 transform: scale(1.07);
-                box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+                box-shadow: 0 0 25px rgba(0, 229, 255, 0.94);
+                .img {
+                    filter: blur(6px);
+                    background: rgba(255, 255, 255, .4);
+                    box-shadow: 0 0 95px rgba(0, 229, 255, 0.94);
+                    transition: 50ms ease-in-out;
+                }
+                .text {
+                    z-index: 1;
+                    font-weight: bold;
+                    transition: 100ms ease-in-out;
+                }
             }
         }
     }
@@ -122,7 +159,7 @@ nav.open-nav {
     .hamicon {
         display: none;
     }
-    nav {
+    .wrapper nav {
         transform: translateX(0);
         position: unset;
         display: block;
@@ -142,11 +179,10 @@ nav.open-nav {
                 padding: .5em 1.5em;
 
                 &:hover {
-                background: none;
-                text-decoration: underline;
+                    background: none;
+                    text-decoration: underline;
                 }
             }
-            
         }
     }
 }
